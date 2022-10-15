@@ -1,0 +1,21 @@
+//Feature engineering is the process of using domain knowledge to extract features from raw data.These features can be used to improve the performance of ML algo.
+//We cant give the raw data to ML model,so the process of modification of the raw data into modified data to be given to the ML model is called feature engineering.
+
+FLOW CHART-
+Data Assets-->Data Retrieval-->{Data Processing and Wrangling      }-->Modelling-->Model Evaluation and Tuning-->Deployment and Monitoring
+                               {Feature Extraction and Engineering }       ^                         |
+                               {Feature Scaling and Selection      }       |                         |
+                                     Data Preparation                      |                         |
+                                                |                        ML Algo                     |
+                                                -----------------------------------------------------|
+                                                Re iterate till satisfactory model performance
+
+Types of feature Engineering
+1)Feature Transformation-(Treansforming or changing the given features to get a new feature data)
+   a)Missing Value Computation-(Missing values can be replaced by mean,median pr mode or the row can be completely removed)
+   b)Handling Categorical Features-(Categorical features can be created and used as required)
+   c)Outlier Detection-(Detect and remove the outlier to get more approximate result for eg in regression)
+   d)Feature Scaling-(Let us have a data set having features as age and area in sq feet of their house.So if we use an algo like KNN,where euclidean dist is used to find nearest neighbour to a test point then since arae has comparebly larger value than age,it will dominate thus we need to scale the area properly to get correct result)
+2)Feature Construction-(Techniques->feature splitting,grouping//Create a completely new column.It depends on your domain knowledge,experience or intution.I can combine two columns under the name family if the columns given are parent and child respectively.Now I can further convert it into categorical type like if the number is 0->alone,0-4->small and so on)
+3)Feature Selection-(Selecting some few columns/features to study the data which are more import-extracting important features)
+4)Feature Extraction-(Creating a completely new feature from our feature column programmatically.eg-PCA-->I am studying house pricing and the features are rooms and washrooms.But i want to have only one feature so,i will create a completely new feature called square feet area)
